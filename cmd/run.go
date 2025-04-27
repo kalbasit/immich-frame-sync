@@ -15,7 +15,13 @@ func runCommand() *cli.Command {
 		Aliases: []string{"r"},
 		Usage:   "run the frame refresher which sync deletes and if necessary refreshes the daily images",
 		Action:  runAction(),
-		Flags:   []cli.Flag{},
+		Flags: []cli.Flag{
+			&cli.BoolFlag{
+				Name:    "sync-deletes",
+				Usage:   "Whether to move deleted images on the frame to trash on Immich",
+				Sources: cli.EnvVars("SYNC_DELETES"),
+			},
+		},
 	}
 }
 
