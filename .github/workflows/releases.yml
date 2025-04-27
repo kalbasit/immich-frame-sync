@@ -1,0 +1,38 @@
+name: Releases
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  flake-check:
+    runs-on: ubuntu-24.04
+    permissions:
+      id-token: "write"
+      contents: "read"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v17
+      - uses: DeterminateSystems/magic-nix-cache-action@v9
+      - uses: DeterminateSystems/flake-checker-action@main
+      - run: nix flake check -L --all-systems
+  docker:
+    uses: ./.github/workflows/docker.yml
+    needs: flake-check
+    with:
+      systems: "['x86_64-linux', 'aarch64-linux']"
+      images: kalbasit/immich-frame-sync
+      username: ${{ vars.DOCKERHUB_USERNAME }}
+    secrets:
+      password: ${{ secrets.DOCKERHUB_TOKEN }}
+  release:
+    runs-on: ubuntu-24.04
+    needs: flake-check
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Release with Notes
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          make_latest: "true"
