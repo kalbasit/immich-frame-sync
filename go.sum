@@ -13,6 +13,8 @@ github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3 h1:5ZPtiqj0JL5oKWmcsq4VMaAW5uk
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3/go.mod h1:ndYquD05frm2vACXE1nsccT4oJzjhw2arTS2cpUD1PI=
 github.com/kalbasit/ncps v0.1.1 h1:RFIgWSOc0QebouCEQrRDyRVSi6irUMKzcBgnmkVXwlE=
 github.com/kalbasit/ncps v0.1.1/go.mod h1:1qAFahoHptOsAoob7kZ7jNr1WWVD5D6SLltGuK9Et+E=
+github.com/kalbasit/ncps v0.2.0 h1:yE+vcZRi7+mGOTrB4WccM0GBKVInBaksqwTG2Umte/w=
+github.com/kalbasit/ncps v0.2.0/go.mod h1:CWQcd1iWHGkl3+e01pKrszy2fpaxAuiu2TvqQERysqc=
 github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovkB8vQcUbaXHg=
 github.com/mattn/go-colorable v0.1.14 h1:9A9LHSqF/7dyVVX6g0U9cwm9pG3kP9gSzcuIPHPsaIE=
 github.com/mattn/go-colorable v0.1.14/go.mod h1:6LmQG8QLFO4G5z1gPvYEzlUgJ2wF+stgPZH1UqBm1s8=
