@@ -3,10 +3,10 @@ module github.com/kalbasit/immich-frame-sync
 go 1.23.7
 
 require (
-	github.com/kalbasit/ncps v0.1.1
+	github.com/kalbasit/ncps v0.2.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/rs/zerolog v1.34.0
-	github.com/urfave/cli/v3 v3.3.1
+	github.com/urfave/cli/v3 v3.3.2
 	go.opentelemetry.io/otel v1.35.0
 	go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc v0.11.0
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v1.35.0
