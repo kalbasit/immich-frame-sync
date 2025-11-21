@@ -3,7 +3,7 @@ module github.com/kalbasit/immich-frame-sync
 go 1.23.7
 
 require (
-	github.com/kalbasit/ncps v0.2.0
+	github.com/kalbasit/ncps v0.4.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/rs/zerolog v1.34.0
 	github.com/urfave/cli/v3 v3.3.3
